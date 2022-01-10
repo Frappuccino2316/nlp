@@ -1,6 +1,10 @@
-from janome.tokenizer import Tokenizer
+from janome.analyzer import Analyzer
+from janome.tokenfilter import POSKeepFilter
 
 text = "彼女と国立新美術館へ行った。"
-t = Tokenizer(wakati=True)
-for token in t.tokenize(text):
+
+token_filters = [POSKeepFilter('名刺')]
+a = Analyzer(token_filters=token_filters)
+
+for token in a.analyze(text):
     print(token)
