@@ -4,7 +4,7 @@ import collections
 wakati = MeCab.Tagger("-Owakati")
 
 # テキストを読み込み
-f = open('ma/melos.txt')
+f = open("ma/melos.txt")
 text = f.read()
 f.close()
 
